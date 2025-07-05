@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Wawita</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html">
+                        <img src="../assets/img/logo.jpeg" alt="Wawita Logo" class="logo">
+                        <span class="brand-text">Wawita</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Volver al Inicio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-section" style="padding: calc(80px + 60px) 0 60px; min-height: 100vh; background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);">
+        <div class="container">
+            <div class="login-container" style="max-width: 400px; margin: 0 auto;">
+                <div class="form-container">
+                    <div class="login-header" style="text-align: center; margin-bottom: 40px;">
+                        <h1 style="color: var(--primary-color); margin-bottom: 10px;">Iniciar Sesión</h1>
+                        <p style="color: var(--gray-600);">Accede a tu cuenta de Wawita</p>
+                    </div>
+
+                    <form id="loginForm" class="login-form">
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                <i class="fas fa-envelope" style="margin-right: 8px;"></i>
+                                Correo Electrónico
+                            </label>
+                            <input type="email" id="email" name="email" class="form-input" required placeholder="tu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="form-label">
+                                <i class="fas fa-lock" style="margin-right: 8px;"></i>
+                                Contraseña
+                            </label>
+                            <div style="position: relative;">
+                                <input type="password" id="password" name="password" class="form-input" required placeholder="Tu contraseña">
+                                <button type="button" id="togglePassword" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--gray-500); cursor: pointer;">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                            <label style="display: flex; align-items: center; cursor: pointer;">
+                                <input type="checkbox" id="remember" name="remember" style="margin-right: 8px;">
+                                <span style="font-size: 14px; color: var(--gray-600);">Recordarme</span>
+                            </label>
+                            <a href="#" style="font-size: 14px; color: var(--primary-color); text-decoration: none;">¿Olvidaste tu contraseña?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;">
+                            <i class="fas fa-sign-in-alt" style="margin-right: 8px;"></i>
+                            Iniciar Sesión
+                        </button>
+
+                        <div style="text-align: center; margin-bottom: 30px;">
+                            <span style="color: var(--gray-500); font-size: 14px;">o</span>
+                        </div>
+
+                        <div class="social-login" style="display: flex; flex-direction: column; gap: 12px;">
+                            <button type="button" class="btn" style="width: 100%; background: #4285f4; color: white; border: none;">
+                                <i class="fab fa-google" style="margin-right: 8px;"></i>
+                                Continuar con Google
+                            </button>
+                            <button type="button" class="btn" style="width: 100%; background: #1877f2; color: white; border: none;">
+                                <i class="fab fa-facebook-f" style="margin-right: 8px;"></i>
+                                Continuar con Facebook
+                            </button>
+                            <button type="button" class="btn" style="width: 100%; background: #0078d4; color: white; border: none;">
+                                <i class="fab fa-microsoft" style="margin-right: 8px;"></i>
+                                Continuar con Microsoft
+                            </button>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--gray-200);">
+                            <p style="color: var(--gray-600); font-size: 14px;">
+                                ¿No tienes una cuenta? 
+                                <a href="registro.html" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">Regístrate aquí</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

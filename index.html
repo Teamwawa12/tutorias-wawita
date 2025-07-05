@@ -3,105 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorías Wawita</title>
-    <link rel="stylesheet" href="estilosI.css">
+    <title>Tutorías Wawita - Plataforma de Aprendizaje</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="CuerpoIndex">
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="boton">
-            <img src="img/boton.jpeg" alt="botón de menú" class="menu">
-        </label>
-        <a href="#" class="enlace">
-            <img src="img/logo.jpeg" alt="logo" class="logo">
-        </a>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pagos.html">Pagos</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="postula.html">Postula</a></li>
-            <li><a href="postulaAlumno.html">Inscríbete alumno</a></li>
-            <li><a href="Notificaciones.html">Reportar error</a></li>
-            <!-- Botón de chat -->
-            <li><button id="openChatBtn" class="chat-btn">Chat</button></li>
-        </ul>
-    </nav>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="assets/img/logo.jpeg" alt="Wawita Logo" class="logo" id="dynamicLogo">
+                    <span class="brand-text">Wawita</span>
+                </div>
+                
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="html/galeria.html" class="nav-link">Cursos</a></li>
+                        <li class="nav-item"><a href="html/tutores.html" class="nav-link">Tutores</a></li>
+                        <li class="nav-item"><a href="html/pagos.html" class="nav-link">Planes</a></li>
+                        <li class="nav-item"><a href="html/postula.html" class="nav-link">Únete</a></li>
+                        <li class="nav-item"><a href="html/login.html" class="nav-link btn-login">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Ventana de chat (modal) -->
-    <div id="chatModal" class="modal">
-        <div class="modal-content">
-            <span id="closeChatBtn" class="close">&times;</span>
-            <h2>Chat en Tiempo Real</h2>
-            <div id="chatBox" class="chat-box">
-                <!-- Aquí se mostrarán los mensajes -->
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Tutorías <span class="text-primary">Wawita</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    La plataforma de aprendizaje <span class="text-primary">definitiva</span>
+                </h2>
+                <p class="hero-description">
+                    Wawita es una plataforma de tutorías que se enfoca en la seguridad, rapidez, eficacia y adaptación a cualquier usuario. 
+                    Gracias a sus funcionalidades innovadoras, Wawita se posiciona entre las mejores plataformas educativas del mercado.
+                </p>
+                <div class="hero-buttons">
+                    <a href="html/galeria.html" class="btn btn-primary">Explorar Cursos</a>
+                    <a href="#caracteristicas" class="btn btn-secondary">Conocer Más</a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <div class="video-container">
+                    <video controls poster="assets/img/video-poster.jpg">
+                        <source src="assets/vid/Presentación.mkv" type="video/mp4">
+                        Tu navegador no soporta el elemento video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="caracteristicas" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por qué elegir Wawita?</h2>
+                <p class="section-subtitle">Descubre las características que nos hacen únicos</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Rapidez</h3>
+                    <p>Wawita cuenta con la mayor velocidad de inicio. Elimina archivos innecesarios para funcionar de forma limpia y eficaz.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Cuentas Integradas</h3>
+                    <p>Soporte oficial para diferentes cuentas. Inicia sesión con Facebook, Google o Microsoft fácilmente.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Módulos Especializados</h3>
+                    <p>Módulos que te permiten profundizar en temas específicos, evitando confusiones y asegurando el aprendizaje efectivo.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Múltiples Versiones</h3>
+                    <p>Desde tutoriales básicos hasta avanzados, con contenido adaptado a diferentes estilos de aprendizaje.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Sistema de Música</h3>
+                    <p>Escucha tu música favorita mientras estudias. Crea listas de reproducción para tu ambiente de estudio ideal.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguridad</h3>
+                    <p>Plataforma segura con encriptación de datos y protección de la privacidad de nuestros usuarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Estudiantes Activos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Tutores Expertos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Cursos Disponibles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre Nosotros</h2>
+                    <p>
+                        Bienvenidos a Wawita - tu destino ideal para experiencias de aprendizaje personalizadas e innovadoras.
+                        En Wawita, que significa <em>Website for Advanced Wonderful Intelligence, Technology, and Adaptive Learning</em>, 
+                        nos dedicamos a proporcionar tutoriales y recursos de alta calidad.
+                    </p>
+                    <p>
+                        Creemos en el poder del aprendizaje adaptativo y la tecnología avanzada para crear un entorno educativo 
+                        atractivo y efectivo. Nuestro equipo de expertos selecciona contenido que no solo es informativo, 
+                        sino también inspirador.
+                    </p>
+                    <a href="html/nosotros.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+                <div class="about-image">
+                    <img src="assets/gif/wow.gif" alt="Wawita en acción">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para comenzar tu viaje de aprendizaje?</h2>
+                <p>Únete a miles de estudiantes que ya están transformando su futuro con Wawita</p>
+                <div class="cta-buttons">
+                    <a href="html/postulaAlumno.html" class="btn btn-primary">Inscríbete como Estudiante</a>
+                    <a href="html/postula.html" class="btn btn-secondary">Únete como Tutor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Button -->
+    <button id="chatButton" class="chat-button">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chat Modal -->
+    <div id="chatModal" class="chat-modal">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>Chat de Soporte</h3>
+                <button id="closeChatBtn" class="close-chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        ¡Hola! Soy el asistente virtual de Wawita. ¿En qué puedo ayudarte hoy?
+                    </div>
+                </div>
             </div>
             <div class="chat-input">
-                <input type="text" id="messageInput" placeholder="Escribe un mensaje..." />
-                <button id="sendBtn">Enviar</button>
+                <input type="text" id="messageInput" placeholder="Escribe tu mensaje...">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
             </div>
         </div>
     </div>
-    <section>
-        <div class="texto-inicio">
-            <h1>Tutorías <span class="color-secun">Wawita</span></h1>
-            <h2>La página de tutorías <span class="color-secun">definitiva</span></h2>
-            <p>Wawita es una página de tutorías que se enfoca en la seguridad, rapidez, eficacia y adaptación a cualquier usuario que quiera usarla. Gracias a sus funcionalidades, Wawita 
-                consigue posicionarse entre las mejores páginas de tutorías del mercado. <a href="#porque-wawita">Leer más -></a></p>
-        </div>
-        <div class="video">
-            <video controls>
-                <source src="vid/Presentación.mkv" type="video/mp4">
-            </video>
-        </div>
-    </section>
-    <section class="secciones-inferioes">
-        <iframe src="Porque Wawita.html" class="iframe-inferiores"></iframe>
-    </section>
-    <section class="secciones-inferioes">
-        <iframe src="Nosotros.html" class="iframe-inferiores"></iframe>
-    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-column">
-            <ul>
-                <li><a href="">Términosz</a></li>
-                <li><a href="Política de privacidad.html">Política de privacidad</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Productos</h3>
-            <ul>
-                <li>Wawita Launcher</li>
-                <li>Wawita Client</li>
-                <li>Wawita Mobile</li>
-                <li>Wawita Ads</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Recursos</h3>
-            <ul>
-                <li>Tutoriales y guías</li>
-                <li>Blog</li>
-                <li>Centro de soporte</li>
-                <li>Partners</li>
-                <li>Wawita+</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Nuestras redes</h3>
-            <ul>
-                <li>YouTube</li>
-                <li>Discord</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-                <li>Patreon</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>¡Contáctanos!</h3>
-            <p>contacto@wawita.es</p>
-            <p>Estado</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/img/logo.jpeg" alt="Wawita Logo" class="footer-logo">
+                        <h3>Wawita</h3>
+                    </div>
+                    <p>La plataforma de tutorías más avanzada para tu crecimiento académico y profesional.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Productos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Wawita Launcher</a></li>
+                        <li><a href="#">Wawita Client</a></li>
+                        <li><a href="#">Wawita Mobile</a></li>
+                        <li><a href="#">Wawita Ads</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Tutoriales y guías</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Centro de soporte</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Wawita+</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="html/Notificaciones.html">Reportar error</a></li>
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Estado del servicio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contacto@wawita.es</p>
+                        <p><i class="fas fa-phone"></i> +34 900 123 456</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Madrid, España</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Wawita. Todos los derechos reservados.</p>
+                    <div class="footer-bottom-links">
+                        <a href="html/politica-privacidad.html">Política de Privacidad</a>
+                        <a href="#">Términos de Servicio</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="Racha.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/logo-system.js"></script>
 </body>
 </html>
