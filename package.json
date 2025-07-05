@@ -1,0 +1,35 @@
+{
+  "name": "wawita-tutoring-platform",
+  "version": "1.0.0",
+  "description": "Plataforma de tutorías Wawita - Sistema completo de aprendizaje en línea",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview",
+    "serve": "npx http-server . -p 3000 -o"
+  },
+  "keywords": [
+    "tutoring",
+    "education",
+    "learning",
+    "platform",
+    "wawita"
+  ],
+  "author": "Wawita Team",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wawita/tutoring-platform.git"
+  },
+  "homepage": "https://wawita.com",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
